@@ -3,6 +3,7 @@ module.exports = {
     title: `na rondzie w lewo`,
     siteUrl: `https://narondziewlewo.github.io`,
   },
+  pathPrefix: "/",
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
