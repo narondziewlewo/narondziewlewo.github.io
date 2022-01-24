@@ -1,0 +1,17 @@
+@import "../utility/mixins.scss";
+@import "../utility/variables.scss";
+
+.section {
+  padding: 4rem 6rem;
+  @include size(100%);
+  &__title {
+    color: $yellow;
+    @include fontSize("700");
+  }
+  &__description {
+    margin: 1rem 0;
+    width: 75%;
+    color: $yellow;
+    @include fontSize("500");
+  }
+}

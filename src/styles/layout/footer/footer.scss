@@ -1,0 +1,15 @@
+@import "../../utility/variables.scss";
+@import "../../utility/mixins.scss";
+
+.core-footer {
+  width: 100%;
+  text-align: center;
+  background-color: $orange;
+  padding: 1rem 0;
+  &__author {
+    text-decoration: none;
+    font-weight: 700;
+    @include fontSize("600");
+    color: $violet;
+  }
+}

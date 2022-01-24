@@ -1,0 +1,19 @@
+@import "../../../styles/utility/variables.scss";
+@import "../../../styles/utility/mixins.scss";
+
+.button {
+  padding: 0.5em 1em;
+  border-radius: 0.4em;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  @include fontSize("400");
+}
+.yellow {
+  background-color: $yellow;
+  color: $violet;
+  position: relative;
+  &:hover {
+    background-color: darken($yellow, 10%);
+  }
+}

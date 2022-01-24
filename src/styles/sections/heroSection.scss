@@ -1,0 +1,36 @@
+@import "../utility/mixins.scss";
+@import "../utility/variables.scss";
+
+.heroSection {
+  @include flex(column);
+  position: relative;
+  @include size(100%, 100vh);
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+    background-image: $heroImage;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+  }
+  &__title {
+    @include fontSize("800");
+    color: $orange;
+    z-index: 1;
+  }
+  &__subtitle {
+    @include fontSize("700");
+    color: $yellow;
+    z-index: 1;
+  }
+  &__anchor {
+    position: absolute;
+    top: 80%;
+    color: $orange;
+    z-index: 1;
+  }
+}
