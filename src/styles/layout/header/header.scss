@@ -47,6 +47,7 @@
       background-color: $violet;
       transform-origin: top;
       animation: 500ms show;
+      border: 2px solid $orange;
     }
     &__element {
       list-style: none;

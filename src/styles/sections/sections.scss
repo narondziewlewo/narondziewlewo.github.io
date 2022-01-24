@@ -5,12 +5,21 @@
   padding: 4rem 6rem;
   @include size(100%);
   &__title {
+    width: 100%;
     color: $yellow;
     @include fontSize("700");
+    @include breakpoint-down("small") {
+      text-align: center;
+    }
   }
   &__description {
     margin: 1rem 0;
     width: 75%;
+    @include breakpoint-down("small") {
+      text-align: center;
+      margin: 1rem auto;
+      width: 100%;
+    }
     color: $yellow;
     @include fontSize("500");
   }

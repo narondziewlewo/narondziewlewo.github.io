@@ -1,0 +1,30 @@
+@import "../utility/variables.scss";
+@import "../utility/mixins.scss";
+
+.company {
+  @include flex(row, space-between);
+  @include breakpoint-down("small") {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  padding: 2.5rem 0;
+  &__data {
+    @include flex(column);
+    &--title {
+      color: $orange;
+      @include fontSize("900");
+    }
+    &--desc {
+      width: 90%;
+      text-align: center;
+      color: $yellow;
+      font-weight: 400;
+      @include fontSize("500");
+    }
+  }
+  &__icon {
+    margin-bottom: 1rem;
+    @include fontSize("900");
+    color: $orange;
+  }
+}

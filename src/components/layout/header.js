@@ -28,6 +28,13 @@ const Header = () => {
   function navLogic() {
     const nav = document.querySelector(".core-header");
     const currentOffest = window.pageYOffset;
+    if (menu) {
+      const menuList = document.querySelector(".navigation__list--vertical");
+      menuList.style.animation = "500ms hide forwards";
+      setTimeout(() => {
+        setMenu(!menu);
+      }, 500);
+    }
     nav.style.top = windowOffset < currentOffest ? "-100px" : "0px";
     windowOffset = currentOffest;
   }
@@ -89,8 +96,11 @@ const Header = () => {
                   );
                 })}
                 <li className="navigation__list__element">
-                  <a href="#" className="navigation__anchor--button">
-                    <Button colorstyles="button yellow">test</Button>
+                  <a
+                    href="https://discord.com/invite/jdPm4TvphH"
+                    className="navigation__anchor--button"
+                  >
+                    <Button colorstyles="button yellow">Dołącz do nas</Button>
                   </a>
                 </li>
               </ul>
@@ -110,8 +120,11 @@ const Header = () => {
               );
             })}
             <li className="navigation__list__element">
-              <a href="#" className="navigation__anchor--button">
-                <Button colorstyles="button yellow">test</Button>
+              <a
+                href="https://discord.com/invite/jdPm4TvphH"
+                className="navigation__anchor--button"
+              >
+                <Button colorstyles="button yellow">Dołącz do nas</Button>
               </a>
             </li>
           </ul>

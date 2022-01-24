@@ -1,4 +1,7 @@
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import "../../styles/sections/companySection.scss";
 
 const CompanySection = () => {
   const companyData = {
@@ -20,6 +23,20 @@ const CompanySection = () => {
         desc: "Wypadków Drogowych",
       },
     ],
+    workers: [
+      {
+        worker: "Plaszczin",
+      },
+      {
+        worker: "Akatsuki",
+      },
+      {
+        worker: "Darrener",
+      },
+      {
+        worker: "Patpalek",
+      },
+    ],
   };
   return (
     <section className="section" id="company">
@@ -31,6 +48,18 @@ const CompanySection = () => {
             <article className="company__data">
               <h3 className="company__data--title">{value}</h3>
               <p className="company__data--desc">{desc}</p>
+            </article>
+          );
+        })}
+      </section>
+      <h2 className="section__title">Nasza Kadra</h2>
+      <section className="company">
+        {companyData.workers.map((data) => {
+          const { worker } = data;
+          return (
+            <article className="company__data">
+              <FontAwesomeIcon icon={faUser} className="company__icon" />
+              <h3 className="company__data--desc">{worker}</h3>
             </article>
           );
         })}

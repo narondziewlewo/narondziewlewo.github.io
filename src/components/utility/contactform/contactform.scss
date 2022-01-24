@@ -1,0 +1,69 @@
+@import "../../../styles/utility/variables.scss";
+@import "../../../styles/utility/mixins.scss";
+
+.contact {
+  @include flex(column);
+  &__wrapper {
+    @include flex(row, space-between);
+    width: 75%;
+    @include breakpoint-down("small") {
+      width: 100%;
+      @include flex(column);
+      gap: 5rem;
+    }
+    height: fit-content;
+  }
+  &__form {
+    @include breakpoint-down("small") {
+      width: 100%;
+    }
+    width: 50%;
+    height: 100%;
+  }
+  &__socialmedia {
+    text-align: left;
+    width: 50%;
+    @include flex(column, left, left);
+  }
+}
+
+.form {
+  margin-top: 1rem;
+  @include flex(column);
+  &__label {
+    width: 100%;
+    &--text {
+      color: $orange;
+      font-weight: bold;
+      @include fontSize("500");
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__input {
+    background-color: $yellow;
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    resize: none;
+  }
+}
+
+.media {
+  @include flex(row);
+  gap: 1rem;
+  margin: 1rem;
+  &__icon {
+    color: $orange;
+    @include fontSize("700");
+  }
+  &__anchor {
+    color: $orange;
+    position: relative;
+    @include underline($orange);
+    text-decoration: none;
+    font-weight: bold;
+    @include fontSize("600");
+  }
+}
