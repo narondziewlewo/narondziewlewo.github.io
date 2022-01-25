@@ -3,6 +3,9 @@
 
 .section {
   padding: 4rem 6rem;
+  @include breakpoint-up("large") {
+    padding: 4rem 12rem;
+  }
   @include size(100%);
   &__title {
     width: 100%;
