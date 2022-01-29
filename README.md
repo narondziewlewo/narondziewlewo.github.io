@@ -1,9 +1,5 @@
-<style>
-  .header{
-    text-align: center;
-  }
-</style>
-<h1 class="header">
+
+<h1 align="center">
   Na rondzie w lewo
 </h1>
 
